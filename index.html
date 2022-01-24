@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background: #17212B;
+            display: flex;
+            align-items: flex-end;
+        }
+        .bg{
+            width: 100px;
+            height: 180px;
+            background: url("./pic_bulboff.gif");
+        }
+        .onn {
+            color: rgba(61, 250, 4, 0.979);
+            cursor: pointer;
+            background: #2F6EA5;
+            border: 3px;
+            border-radius: 1rem;
+            font-size: 2rem;
+        }
+        .onn:hover {
+            color: rgb(255, 13, 13);
+            transition: 1s;
+            transform: translateY(-10px);
+            transition: transform 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <button class="onn" onclick="on()" >Turn On The Light</button>
+    <div class="bg"></div>
+    <button class="onn" onclick="off()">Turn Off The Light</button>
+    <script>
+        let bg = document.querySelector(".bg");
+        function on() {
+            bg.style.background = "url('./pic_bulbon.gif')"
+        }
+        function off() {
+            bg.style.background = "url('./pic_bulboff.gif')"
+        }
+    </script>
+</body>
+</html>
